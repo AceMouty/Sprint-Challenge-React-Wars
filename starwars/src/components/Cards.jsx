@@ -4,8 +4,10 @@ import React from 'react'
 import {Card} from 'semantic-ui-react';
 
 function Cards(props) {
-	console.log(props.gender)
 	return (
+
+		// Styled components used from SemanticUI 
+		// https://react.semantic-ui.com/usage
     <Card>
       <Card.Content>
         <Card.Header>{props.name}</Card.Header>

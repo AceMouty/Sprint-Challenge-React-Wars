@@ -1,7 +1,7 @@
 
 // Import dependencies and lib's
 import React, {useState, useEffect} from 'react';
-import {Card, CardGroup} from 'semantic-ui-react';
+import {CardGroup} from 'semantic-ui-react';
 import axios from 'axios';
 // Importing styles
 import './App.css';
