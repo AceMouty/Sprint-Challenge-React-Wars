@@ -2,10 +2,21 @@
 
 1. What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-1. What does it mean to think in react?
+	Many people believe React to be a framework when in fact it’s not, React is a library. React  is used to create components for your UI along with handling the state (dadta) of your UI. In the MVC (Model View Control) design model React is the V (view) when using just React. React uses a markup called JSX. JSX is a templating language that allows us to write out markup and infuse JS within it in one place. Components written in React are stand alone pieces of code in which you can write them once and use them anywhere in any project that is using React. React also plays nice with other JS libraries since react is only concerned about rendering the UI and including any and all data and logic that comes with that. Lastly React uses an engine called the virtual DOM. The virtual DOM will interact with the DOM for us. We tell the virtual DOM what elements and state (data) that we want to render to the DOM and it will do it. Beyond that the virtual DOM will react to the state changes that happen in our app and will update the DOM accordingly on its own. What React tries to solve is the handling of complex state without bogging out the web browser. Supporting the above answer would be Facebook and how React came to be. Facebook created React becuase they realized the application was handling a lot of complex data and started to slow down the DOM their response to this was to create react so they could work with data that was only nessecary at any given moment. All other data was hidden away from the DOM. 
 
-1. Describe state.
+2. What does it mean to think in react?
 
-1. Describe props.
+	To think in `React` means to think of everything that you are going to display to a page and how you could break out the entire UI into contained self standing components. Once this is done you will want to create a static UI using the component tree you have come up with. No functionality yet. Also thinking in react means to think of the data that is needed on the page for the component(s) you are rendering and how many pieces of state you will need. You want to use a little state as possible to while state holds as much data as possible. You will also have to determine where state will live within your component tree, and lastly you have to make the data flow so that your UI is interactive and behaves in the desired way.
 
-1. What are side effects, and how do you sync effects in a React component to state or prop changes?
+3. Describe state.
+
+	`state` is a storage for data in React. State can be defined more than once in a React app but each decleration of state is individual of one another and should be used sparingly. We use state to make changes to our data and also as triggers to fire off component side effects if need be.
+
+4. Describe props.
+
+	`props` is short for `properties`. In React props is an object that all components have, by defualt props is an empty object unless we give props data. We assign prop names and values by passing in information from a parent component to a child component when we call the for the child component in the parent component, prop naming and value assignment happens inside the child component `tag`. After we have passed data from a parent component to a child component we can now access that data within the child by passing `props` as a parameter to our 
+	`functional component's`. We can use the props in the child or continue to pass the props down even further to other components that are children of the child component, this is known as `prop drilling`
+
+5. What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+	A side effect is anything that affects something outside the scope of the function being executed. Fetching data from an API, timers, logging, and manually manipulating the DOM are all examples of side effects. There are two categories of side effects in React components - those that don’t require clean-up and those that do require cleanup. A side effect is something that can cause a component to return a different output for the same state and props. We can mangae side effects through the use of the `useEffect()` hook. The `useEffect` hook monitors changes in either `ANY` piece of state or in a `specific` piece of state same goes for `props`, this is determined by the developers. Once state or props change the `useEffect` hook will fire off and run code it has defined within it.
