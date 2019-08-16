@@ -1,8 +1,32 @@
+
+/* Main styling for the app */
 .App {
-  text-align: center;
+	text-align: center;
+	font-size: 2rem;
 }
+
+.loadingText {
+	text-align: center;
+	font-size: 5rem;
+	color: white;
+}
+
 .Header {
   color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+	text-shadow: 1px 1px 5px #fff;
+	font-size: 3rem;
+	font-weight: bold;
 }
-/* write your parent styles in here for your App.js */
+
+/* All Card styling */
+.ui.cards {
+	width: 80%;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.description{
+	line-height: 1.3;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
