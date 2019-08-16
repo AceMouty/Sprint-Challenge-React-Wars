@@ -2,9 +2,10 @@
 // Import dependencies and lib's
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-
 // Importing styles
 import './App.css';
+// Importing Components needed
+import Cards from  './components/Cards'
 
 const App = () => {
 
@@ -17,7 +18,7 @@ const App = () => {
 		axios('https://swapi.co/api/people/')
 		.then(res => {
 
-		// console.log(res.data.results);
+		// Capturing the api request data we are interested in and setting it to state, the data is an array of objects.
 		const apiData = res.data.results
 		setCharacters(apiData);
 	})
@@ -30,6 +31,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+			<Cards/>
     </div>
   );
 }
