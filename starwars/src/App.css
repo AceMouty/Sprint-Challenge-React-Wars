@@ -1,6 +1,7 @@
 
 .App {
-  text-align: center;
+	text-align: center;
+	font-size: 2rem;
 }
 
 .loadingText {
@@ -15,4 +16,16 @@
 	font-size: 3rem;
 	font-weight: bold;
 }
-/* write your parent styles in here for your App.js */
+
+
+.ui.cards {
+	width: 80%;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.description{
+	line-height: 1.3;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
