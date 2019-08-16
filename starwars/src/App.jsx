@@ -1,6 +1,7 @@
 
 // Import dependencies and lib's
 import React, {useState, useEffect} from 'react';
+import {Card, CardGroup} from 'semantic-ui-react';
 import axios from 'axios';
 // Importing styles
 import './App.css';
@@ -31,7 +32,17 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-			<Cards/>
+			<CardGroup>
+				{characters.map((character,index) => {
+					return <Cards 
+					key={index} 
+					name={character.name} 
+					gender={character.gender}
+					hairColor={character.hair_color}
+					skinColor={character.skin_color}
+					birthYear={character.birth_year}/>
+				})}
+			</CardGroup>
     </div>
   );
 }
