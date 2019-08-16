@@ -19,9 +19,9 @@ const App = () => {
 		axios('https://swapi.co/api/people/')
 		.then(res => {
 
-		// Capturing the api request data we are interested in and setting it to state, the data is an array of objects.
-		const apiData = res.data.results
-		setCharacters(apiData);
+			// Capturing the api request data we are interested in and setting it to state, the data is an array of objects.
+			const apiData = res.data.results
+			setCharacters(apiData);
 	})
 	}, []);
 
